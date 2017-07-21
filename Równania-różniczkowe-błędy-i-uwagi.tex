@@ -1,0 +1,499 @@
+\RequirePackage[l2tabu, orthodox]{nag}
+% Autor: Kamil Ziemian
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage[MeX]{polski}
+\usepackage{microtype}
+\let\lll\undefined
+\usepackage{amsmath}
+\usepackage{amsfonts, amssymb, amscd, amsthm}
+\usepackage{upgreek} % Lepsze greckie czcionki. Przyklad skladni: pi = \uppi
+% \usepackage{txfonts} % Inne ulepszenie greckich liter. Przyklad skladni:
+% pi = \piup.
+% \usepackage{latexsym} % Więcej symboli.
+% \usepackage{textcomp} % Pakiet z dziwnymi symbolami.
+\usepackage{indentfirst}
+\usepackage{slashed} % Pozwala pisać slash Feynmana.
+\usepackage{graphicx} % Pozwala wstawiać grafikę.
+\usepackage{titlesec}
+%\usepackage{url} % Pozwala pisać ładnie znak ~.
+\usepackage{xcolor}
+\usepackage{calrsfs}
+\usepackage{vmargin}
+% --------------------------------------------------------------------
+% MARGINS
+% --------------------------------------------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+\usepackage{hyperref}
+% ####################################################################
+
+
+% ########################################
+
+\newtheorem{twr}{Twierdzenie}
+\newtheorem{defin}{Definicja}
+\newtheorem{wni}{Wniosek}
+
+
+% ##############################
+% Dodatkowe ustawienia pod języka polski
+\titlelabel{\thetitle.\quad}
+
+
+% ##############################
+
+\newcommand{\spaceOne}{2.5em}
+\newcommand{\spaceTwo}{2em}
+\newcommand{\spaceThree}{1em}
+\newcommand{\spaceFour}{0.5em}
+
+% Ładniejszy zbiór pusty
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+
+% ####################
+% Uproszczenia w pisaniu tekstu
+\newcommand{\ld}{\ldots}
+
+% Slashe w tekście
+\newcommand{\tbs}{\textbackslash}
+
+% Podstawowe oznaczenia matematyczne
+\newcommand{\fr}{\frac}
+\newcommand{\tfr}{\tfrac}
+\newcommand{\tr}{\textrm}
+
+% Oznaczenia ,,nad i pod''. Wymyśl lepszą nazwę
+\newcommand{\til}{\tilde}
+\newcommand{\ul}{\underline}
+\newcommand{\ol}{\overline}
+\newcommand{\wh}{\widehat}
+\newcommand{\wt}{\widetilde}
+
+% Trzcionki matematyczne
+\newcommand{\mr}{\mathrm}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\mbf}{\mathbf}
+
+% Strzałki
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\xra}{\xrightarrow}
+
+\newcommand{\wtw}{wtedy i~tylko wtedy}
+
+
+% ####################
+% Litery greckie
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\del}{\delta}
+\newcommand{\Del}{\Delta}
+\newcommand{\la}{\uplambda}
+\newcommand{\eps}{\epsilon}
+\newcommand{\veps}{\varepsilon}
+\newcommand{\vp}{\varphi}
+\newcommand{\om}{\omega}
+\newcommand{\Om}{\Omega}
+\newcommand{\si}{\sigma}
+\newcommand{\Si}{\Sigma}
+\newcommand{\tet}{\theta}
+
+% Standardowe oznaczenia literowe
+\newcommand{\N}{\mb{N}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\D}{\mc{D}}
+\newcommand{\Hc}{\mc{H}}
+\newcommand{\Lc}{\mc{L}}
+\newcommand{\Rn}{\R^{ n }}
+\newcommand{\Rc}{\mc{R}}
+\newcommand{\Cc}{\mc{C}}
+\newcommand{\lc}{\mc{l}}
+
+% Mniej używane oznaczenia literowe
+\newcommand{\B}{\mc{B}}
+\newcommand{\Oc}{\mc{O}}
+\newcommand{\Rp}{\R_{ + }}
+
+% ####################
+% Standardowe matematyczne symbole literowe
+% Mathbb
+% \newcommand{\C}{\mb{C}}
+% \newcommand{\N}{\mb{N}}
+% \newcommand{\R}{\mb{R}}
+% \newcommand{\Rn}{\R^{ n }}
+% \newcommand{\Rp}{\R_{ + }}
+
+% % Mathcal
+% \newcommand{\B}{\mc{B}}
+% \newcommand{\D}{\mc{D}}
+% \newcommand{\Fc}{\mc{F}}
+% \newcommand{\M}{\mc{M}}
+% \newcommand{\Rc}{\mc{R}}
+% \newcommand{\Cc}{\mc{C}}
+% \newcommand{\Oc}{\mc{O}}
+% \newcommand{\T}{\mc{T}}
+
+
+% ####################
+% Teoria mnogości
+\newcommand{\set}[1]{\{ #1 \}}
+\newcommand{\es}{\emptyset}
+\newcommand{\sset}{\subset}
+\newcommand{\setm}{\setminus}
+\newcommand{\ti}{\times}
+
+
+% ####################
+% Algebra
+\newcommand{\Real}{\mf{Re}}
+\newcommand{\Imag}{\mf{Im}}
+\newcommand{\ot}{\otimes}
+\newcommand{\Tr}{\mr{Tr}}
+
+
+% ####################
+% Analiza matematyczna
+
+% Granice
+\newcommand{\Lim}{\lim\limits}
+\newcommand{\Liminf}{\ul{\lim}}
+\newcommand{\Limsup}{\ol{\lim}}
+
+% Sumy
+\newcommand{\Sum}{\sum\limits}
+
+% Różniczkowanie i pochodne
+\newcommand{\dk}{\, d} % Różniczka Kończąca całkę
+\newcommand{\pr}{\partial}
+\newcommand{\de}{\mr{d}}
+\newcommand{\dd}[3]{\fr{ \de^{ #1 } { #2 } }{ \de { #3 }^{ #1 } }}
+\newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } }}
+
+% Powszechnie używane symbole
+\newcommand{\Cinfty}{\Cc^{ \infty }}
+
+% Całki i całkowanie
+\newcommand{\dx}{\de x}
+\newcommand{\Int}{\int\limits}
+\newcommand{\IntSet}[3]{\Int_{ #1 } #2 \, d#3} % Całka po zbiorze.
+\newcommand{\IntL}[3]{ \Int_{ { #1 } }^{ { #2 } } \de#3 \; }
+\newcommand{\IntCaJ}[2]{ \Int #1 \, \de#2 } % Juz z calkowaniem
+% Całka Jeden
+\newcommand{\IntCaD}[2] { \Int #1 \, d#2 } % Całka dwa
+\newcommand{\IntFi}[2]{ \Int \de#1 \, #2 } % Bardziej Fizyczna notacja;)
+\newcommand{\IntWie}[3]{ \Int_{ #1 } \de^{ #2 }#3 \; } % Wielowymiarowa
+\newcommand{\IntDo}[5]{ \Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \; }
+
+% ####################
+% Całki w określonych granicach
+\newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
+\newcommand{\IntB}[1]{\int_{ \R } \de #1 \;}
+\newcommand{\IntC}[2]{\int_{ \R } #1 \, \de #2}
+\newcommand{\IntD}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
+
+
+% ####################
+% Analiza funkcjonalna
+\newcommand{\da}{\dagger}
+
+% Brakety
+% W analizie funkcjonalnej też często się je stosuje
+\newcommand{\lket}{\langle}
+\newcommand{\rket}{\rangle}
+
+% Przestrzenie L^{ p }
+\newcommand{\Lj}{L^{ 1 }}
+\newcommand{\Ld}{L^{ 2 }}
+\newcommand{\Lp}{L^{ p }}
+\newcommand{\LIj}{\Lc^{ 1 }}
+\newcommand{\LIp}{\Lc^{ p }}
+\newcommand{\LdJ}{\Ld( \R, \de \mu )}
+\newcommand{\LdT}{\Ld( \R^{ 3 }, \de \mu )}
+\newcommand{\Ldlim}{L^{ 2 }-\Lim}
+
+
+% ####################
+% Wartość bezwzględna i normy
+\providecommand{\absj}[1]{\lvert #1 \rvert}
+\providecommand{\absd}[1]{\left| #1 \right|}
+\providecommand{\absd}[1]{\left| \, #1 \, \right|}
+\newcommand{\norm}[1]{\left|\left| #1 \right|\right|}
+
+
+% ####################
+% Edycja tekstu
+\newcommand{\tb}{\textbf}
+\newcommand{\noi}{\noindent}
+\newcommand{\start}{\noi \tb{--} {}}
+\newcommand{\Str}[1]{\tb{Str. #1.}}
+\newcommand{\StrWg}[2]{\tb{Str. #1, wiersz #2.}}
+\newcommand{\StrWd}[2]{\tb{Str. #1, wiersz #2 (od dołu).}}
+\newcommand{\Dow}{\tb{Dowód}}
+\newcommand{\Center}[1]{\begin{center} #1 \end{center}}
+\newcommand{\CenterTB}[1]{\Center{\tb{#1}}}
+\newcommand{\Jest}{\tb{Jest: }}
+\newcommand{\Pow}{\tb{Powinno być: }}
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\Prze}{{\color{red} Przemyśl.}}
+\newcommand{\Pop}{{\color{red} Popraw.}}
+\newcommand{\Prob}{{\color{red} Problem.}}
+\newcommand{\Dok}{{\color{red} Dokończ.}}
+\newcommand{\Pyt}{{\color{red} Pytanie.}}
+\newcommand{\Main}[1]{ \begin{center} {\LARGE \tb{#1} } \end{center} }
+\newcommand{\Field}[1]{ \begin{center} {\Large \tb{#1} } \end{center} }
+\newcommand{\Work}[1]{ \begin{center} {\large \tb{#1}} \end{center} }
+
+
+% ##############################
+% Oznaczenia dla Reeda, Simona
+
+\newcommand{\ci}{\circ}
+
+% Przestrzenie Hilberta
+\newcommand{\lcd}{\ell_{ 2 }} % l Caligraphy Dwa
+\newcommand{\SP}[2]{( #1, \, #2 )} % Scalar product.
+\newcommand{\dket}[2]{\lket #1, \, #2 \rket} % Dirac ket
+
+% % Sumy
+% \newcommand{\Sum}{\sum\limits}
+
+% % Różniczkowanie i pochodne
+% \newcommand{\pr}{\partial}
+% \newcommand{\de}{\mr{d}}
+% \newcommand{\dd}[3]{\fr{ \de^{ #1 } { #2 } }{ \de { #3 }^{ #1 } }}
+% \newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } }}
+
+% % Całki
+% \newcommand{\Int}{\int\limits}
+% \newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
+% \newcommand{\IntB}[1]{\int_{ \R } \de #1 \;}
+% \newcommand{\IntC}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
+% \newcommand{\IntCa}[2]{ \Int #1 \, \de#2 } % Juz z calkowaniem
+% \newcommand{\IntFi}[2]{ \Int \de#1 \, #2 } % Bardziej Fizyczna notacja;)
+% \newcommand{\IntWie}[3]{ \int_{ #1 } \de^{ #2 }#3 \; } % Wielowymiarowa.
+% \newcommand{\IntDo}[5]{ \Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \; }
+% \newcommand{\IntL}[3]{ \int\limits_{ { #1 } }^{ { #2 } } \d#3 \; }
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+% ##############################
+\Field{Równania różniczkowe zwyczajne, błędy i~uwagi}
+
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ##############################
+
+
+
+% ####################
+\Work{
+  N. M. Matwiejew \\
+  ,,Metody całkowania równana różniczkowych zwyczajnych'',
+  \cite{Mat82} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{15} Równanie (10) zostało bardzo elegancko wyprowadzone,
+przy założeniu, że~funkcja uwikłana dana równaniem (9) spełnia
+równanie różniczkowe (1), nie odpowiada to jednak na pytanie czy jeśli
+funkcja $y( x )$ spełnia równanie (10), to spełnia też interesujące
+nas równanie wyjściowe. Dowód tego twierdzenia jest następujący.
+Załóżmy, że $\Phi_{ y }' \neq 0$, tak by było zapewnione istnienie
+funkcji uwikłanej. Jeżeli teraz spełnione jest równanie (10), to można
+je przekształcić do postaci:
+\begin{equation*}
+  -\fr{ \Phi_{ x }' }{ \Phi_{ y }' } = f( x, y ).
+\end{equation*}
+Lewa strona tej równości jest równa pochodnej funkcji uwikłanej
+$y( x )$, określonej wzorem (9). \\
+\start \Str{16} \Dok \\
+\start \Str{31} \Dok
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    5 & & 9 & Dodzimy & Dowodzimy \\
+    5 & & 8 & potkowych & początkowych \\
+    5 & & 7 & poąątkowych & początkowych \\
+    10 & & 19 & damy & mamy \\
+    15 & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi \\
+\StrWg{15}{13}
+\Jest w~sensie ustępu \\
+\Pow w~sensie zdefiniowanym w~ustępie \\
+\StrWd{20}{2} \Jest i~nie ma rozwiązania określonego w~tym samym
+przedziale nie~identycznego z~rozwiązaniem $y = y( x )$ chociażby
+w~jednym punkcie przedziału $\abs{ x - x_{ 0 } } \leq h$ różnym
+od~punktu $x = x_{ 0 }$. \\
+\Pow i~nie istnieje inne rozwiązanie określone w~przedziale
+$\abs{ x - x_{ 0 } } \leq h_{ 1 } \leq h$ które nie byłoby równe
+rozwiązaniu $y = y( x )$ w~każdym punkcie przedziału
+$\abs{ x - x_{ 0 } } \leq h_{ 1 }$.
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##############################
+\Field{Równania różniczkowe cząstkowe, błędy i~uwagi}
+% ##############################
+
+
+
+% ####################
+\Work{
+  L.C. Evans \\
+  ,,Równania różniczkowe cząstkowe'', \cite{Eva08} }
+
+
+\CenterTB{Uwagi}
+\start \Str{594} \\
+\start \Str{597} Nie rozumiem, dlaczego trzeba zakładać we~wzorze
+całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
+że~całkowalność i~mierzalność wystarczają.
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    19 & 4 & & równań & tych równań \\
+    % & & & & \\
+    593 & 5 & & $a, b > 0$ & $a, b \in \mb{R}$ \\
+    597 & 1 & & \emph{współrzędnych) iloczyn} & \emph{współrzędnych)} \\
+    597 & 2 & & $x_{ n } >$ & $x_{ n } =$ \\
+    %% 600 & & 4 & $x + h_{ i } e_{ i } \in U_{ \epsilon }$ &
+    %% $x + h_{ i } e_{ i } \in U$ \\
+    %% & & & & \\
+    601 & & 10 & $W \: \subset \subset U$ & $W \subset \subset U$ \\
+    601 & & 5 & $W \: \subset \subset U$ & $W \subset \subset U$ \\
+    614 & 9 & & $u \: \in H$ & $u \in H$\\
+    615 & & 9 & miary & miary. \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceOne}
+
+
+
+
+
+% ####################
+\Work{
+  L. H\"{o}rmander \\
+  ,,The Analysis of Linear Partial Differential Operators I.
+  Distributon Theory and Fourier Analysis'', \cite{Hor83} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    6 & 5 & & $M >$ & $M =$ \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi \\
+\StrWg{1}{3}
+\Jest every function is not differentiable. \\
+\Pow not every function is differentiable. \\
+
+\vspace{\spaceOne}
+
+
+
+
+
+% ####################
+\Work{
+  P. Strzelecki \\
+  ,,Krótkie wprowadzenie do równań różniczkowych cząstkowych'',
+  \cite{Str06} }
+
+
+\CenterTB{Uwagi}
+\begin{itemize}
+\item Str. 117.???
+  % \item
+  % \item
+  % \item
+  % \item
+  % \item
+  % \item
+  % \item
+  % \item
+  % \item
+\end{itemize}
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    117 & & & $\exp\left( \fr{ 1 }{ 1 - | x |^{ 2 } } \right)$
+           & $\exp\left( -\fr{ 1 }{ 1 - | x |^{ 2 } } \right)$ \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+\bibliographystyle{alpha} \bibliography{Bibliography}{}
+
+
+
+\end{document}
