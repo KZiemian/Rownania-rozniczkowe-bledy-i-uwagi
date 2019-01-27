@@ -140,8 +140,53 @@
 
 
 % ######################################
-\maketitle  % Tytuł całego tekstu
+\maketitle % Tytuł całego tekstu
 % ######################################
+
+
+
+% ####################
+\Work{
+  Władimir Igoriewicz Arnold \\
+  ,,Równania różniczkowe zwyczajne'', \cite{} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    11  & 17 & & mechanice klasycznej & mechanice kwantowej \\
+    15  & & 16 & rozdziale 6 & rozdziale 5 \\
+    28  & 15 & & wzór (8) & wzór \\
+    34  &  9 & & $\dot{ x }_{ 1 } = x_{ 2 }$ & $\dot{ x }_{ 1 } = x_{ 1 }$ \\
+    47  & & 12 & $x_{ i } = \varphi_{ i }( x_{ 1 }, \ldots, x_{ n } )$
+           & $x_{ i } = \varphi_{ i }( y_{ 1 }, \ldots, y_{ n } )$ \\
+    53 & & 14 & obrót & obrót krzywych całkowych \\
+    56 & 12 & & osobliwym & nieosobliwym \\
+    61 & 7 & & $\mathbf{x}$, $\boldsymbol\alpha_{ 0 }$ & $\mathbf{x}$, $\boldsymbol\alpha$ \\
+    64 & & 11 & $\mathbf{g}( t_{ 2 }, t_{ 1 }, \mathbf{x} ) = \mathbf{g}^{ t_{ 2 } }_{ t_{ 1 } }( \mathbf{x}, t_{ 1 } )$ & $\mathbf{g}^{ t_{ 2 } }_{ t_{ 1 } }( \mathbf{x}, t_{ 1 } ) = \mathbf{g}( t_{ 2 }, t_{ 1 }, \mathbf{x} )$ \\
+    64 & & 10 & $( \mathbf{\varphi}( t ), t )$ & $( t, \mathbf{\varphi}( t ) )$ \\
+    66 & 17 & & $\mathbf{v}( t, \mathbf{x}, \dot{ \boldsymbol\alpha } )$ & $\mathbf{v}( t, \mathbf{x}, \boldsymbol\alpha )$ \\
+    66 & & 7 & \emph{tyłu do brzegu} & \emph{tyłu nieograniczenie albo do brzegu} \\
+    70 & & 13 & $\dot{ p }_{ i } = \pd{}{ H }{ q_{ i } }$ & $\dot{ p }_{ i } = -\pd{}{ H }{ q_{ i } }$ \\
+    71 & & 15 & $\frac{ \partial \bold{ v }_{ 0 } }{ \bold{ x } }$ & $\pd{}{ \bold{ v }_{ 0 } }{ \bold{ x } }$ \\
+    72 & 4 & & ,,niezaburzonego'' & ,,zaburzonego'' \\
+    73 & 5 & & $\mathbf{x}( 0$ & $\mathbf{x}( 0 )$ \\
+    90 & & 3 & \emph{wraz z pochodną dla} $x = 0$ & \emph{dla} $x = 0$ \\
+    92 & 3 & & $U( x( O ) )$ & $U( x( 0 ) )$ \\
+    110 & 9 & & sumą częściową szeregu -- iloczynu & jest sumą części wyrazów iloczynu \\
+    123 & 6 & & $^{ \mathbb{R} }A : \mathbb{C}^{ m } \rightarrow ^{ \mathbb{R} }\mathbb{C}^{ n }$ & $^{ \mathbb{R} }A : ^{ \mathbb{R} }\mathbb{C}^{ m } \rightarrow ^{ \mathbb{R} }\mathbb{C}^{ n }$ \\
+    125 & 5 & & $\mathbf{I}$ & $I$ \\
+    & & & & \\ \hline
+  \end{tabular}
+\end{center}
+
+
 
 
 
@@ -162,9 +207,9 @@ nas równanie wyjściowe. Dowód tego twierdzenia jest następujący.
 Załóżmy, że $\Phi_{ y }' \neq 0$, tak by było zapewnione istnienie
 funkcji uwikłanej. Jeżeli teraz spełnione jest równanie (10), to można
 je przekształcić do postaci:
-\begin{equation*}
+\begin{equation}
   -\fr{ \Phi_{ x }' }{ \Phi_{ y }' } = f( x, y ).
-\end{equation*}
+\end{equation}
 Lewa strona tej równości jest równa pochodnej funkcji uwikłanej
 $y( x )$, określonej wzorem (9). \\
 \start \Str{16} \Dok \\
@@ -180,11 +225,11 @@ $y( x )$, określonej wzorem (9). \\
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    5 & & 9 & Dodzimy & Dowodzimy \\
-    5 & & 8 & potkowych & początkowych \\
-    5 & & 7 & poąątkowych & początkowych \\
-    10 & & 19 & damy & mamy \\
-    15 & & & & \\
+    5   & &  9 & Dodzimy & Dowodzimy \\
+    5   & &  8 & potkowych & początkowych \\
+    5   & &  7 & poąątkowych & początkowych \\
+    10  & & 19 & damy & mamy \\
+    15  & & & & \\
     % & & & & \\
     % & & & & \\
     \hline
@@ -194,9 +239,10 @@ $y( x )$, określonej wzorem (9). \\
 \StrWg{15}{13}
 \Jest w~sensie ustępu \\
 \Pow w~sensie zdefiniowanym w~ustępie \\
-\StrWd{20}{2} \Jest i~nie ma rozwiązania określonego w~tym samym
-przedziale nie~identycznego z~rozwiązaniem $y = y( x )$ chociażby
-w~jednym punkcie przedziału $\abso{ x - x_{ 0 } } \leq h$ różnym
+\StrWd{20}{2} \\
+\Jest i~nie ma rozwiązania określonego w~tym samym przedziale
+nie~identycznego z~rozwiązaniem $y = y( x )$ chociażby w~jednym
+punkcie przedziału $\abso{ x - x_{ 0 } } \leq h$ różnym
 od~punktu $x = x_{ 0 }$. \\
 \Pow i~nie istnieje inne rozwiązanie określone w~przedziale
 $\abso{ x - x_{ 0 } } \leq h_{ 1 } \leq h$ które nie byłoby równe
