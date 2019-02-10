@@ -45,7 +45,7 @@
 % ------------------------------
 % Często przydatne pakiety
 % ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
 \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
@@ -61,7 +61,7 @@
 % Mathematical Society (w skrócie AMS)
 \usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
 % \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
-\usepackage{upgreek} % Ładniejsze greckie litery
+% \usepackage{upgreek} % Ładniejsze greckie litery
 % Przykładowa składnia: pi = \uppi
 \usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
 \usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
@@ -84,7 +84,7 @@
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
 % ----------------------------
-% \usepackage{} % Pakiet napisany między innymi
+\usepackage{rownaniarozniczkowe} % Pakiet napisany między innymi
 % dla tego pliku.
 \usepackage{latexshortcuts}
 \usepackage{mathshortcuts}
@@ -146,7 +146,7 @@
 
 
 % ####################
-\Work{
+\Work{ % Autor i tytuł dzieła
   Władimir Igoriewicz Arnold \\
   ,,Równania różniczkowe zwyczajne'', \cite{} }
 
@@ -166,25 +166,39 @@
     34  &  9 & & $\dot{ x }_{ 1 } = x_{ 2 }$ & $\dot{ x }_{ 1 } = x_{ 1 }$ \\
     47  & & 12 & $x_{ i } = \varphi_{ i }( x_{ 1 }, \ldots, x_{ n } )$
            & $x_{ i } = \varphi_{ i }( y_{ 1 }, \ldots, y_{ n } )$ \\
-    53 & & 14 & obrót & obrót krzywych całkowych \\
-    56 & 12 & & osobliwym & nieosobliwym \\
-    61 & 7 & & $\mathbf{x}$, $\boldsymbol\alpha_{ 0 }$ & $\mathbf{x}$, $\boldsymbol\alpha$ \\
-    64 & & 11 & $\mathbf{g}( t_{ 2 }, t_{ 1 }, \mathbf{x} ) = \mathbf{g}^{ t_{ 2 } }_{ t_{ 1 } }( \mathbf{x}, t_{ 1 } )$ & $\mathbf{g}^{ t_{ 2 } }_{ t_{ 1 } }( \mathbf{x}, t_{ 1 } ) = \mathbf{g}( t_{ 2 }, t_{ 1 }, \mathbf{x} )$ \\
-    64 & & 10 & $( \mathbf{\varphi}( t ), t )$ & $( t, \mathbf{\varphi}( t ) )$ \\
-    66 & 17 & & $\mathbf{v}( t, \mathbf{x}, \dot{ \boldsymbol\alpha } )$ & $\mathbf{v}( t, \mathbf{x}, \boldsymbol\alpha )$ \\
-    66 & & 7 & \emph{tyłu do brzegu} & \emph{tyłu nieograniczenie albo do brzegu} \\
-    70 & & 13 & $\dot{ p }_{ i } = \pd{}{ H }{ q_{ i } }$ & $\dot{ p }_{ i } = -\pd{}{ H }{ q_{ i } }$ \\
-    71 & & 15 & $\frac{ \partial \bold{ v }_{ 0 } }{ \bold{ x } }$ & $\pd{}{ \bold{ v }_{ 0 } }{ \bold{ x } }$ \\
-    72 & 4 & & ,,niezaburzonego'' & ,,zaburzonego'' \\
-    73 & 5 & & $\mathbf{x}( 0$ & $\mathbf{x}( 0 )$ \\
-    90 & & 3 & \emph{wraz z pochodną dla} $x = 0$ & \emph{dla} $x = 0$ \\
-    92 & 3 & & $U( x( O ) )$ & $U( x( 0 ) )$ \\
-    110 & 9 & & sumą częściową szeregu -- iloczynu & jest sumą części wyrazów iloczynu \\
-    123 & 6 & & $^{ \mathbb{R} }A : \mathbb{C}^{ m } \rightarrow ^{ \mathbb{R} }\mathbb{C}^{ n }$ & $^{ \mathbb{R} }A : ^{ \mathbb{R} }\mathbb{C}^{ m } \rightarrow ^{ \mathbb{R} }\mathbb{C}^{ n }$ \\
-    125 & 5 & & $\mathbf{I}$ & $I$ \\
-    & & & & \\ \hline
+    53  & & 14 & obrót & obrót krzywych całkowych \\
+    56  & 12 & & osobliwym & nieosobliwym \\
+    61  &  7 & & $\xbf$, $\boldsymbol{\alpha}_{ 0 }$
+           & $\xbf$, $\boldsymbol{\alpha}$ \\
+    64  & & 11 & $\gbf( t_{ 2 }, t_{ 1 }, \xbf )
+                = \gbf^{ t_{ 2 } }_{ t_{ 1 } }( \xbf, t_{ 1 } )$
+           & $\gbf^{ t_{ 2 } }_{ t_{ 1 } }( \xbf, t_{ 1 } )
+             = \gbf( t_{ 2 }, t_{ 1 }, \xbf )$ \\
+    64  & & 10 & $( \vpb( t ), t )$ & $( t, \vpb( t ) )$ \\
+    66  & 17 & & $\vbf( t, \xbf, \dot{ \alb } )$
+           & $\vbf( t, \xbf, \alb )$ \\
+    70  & & 13 & $\pdot_{ i } = \pd{ }{ H }{ q_{ i } }$
+           & $\pdot_{ i } = -\pd{ }{ H }{ q_{ i } }$ \\
+    71  & & 15 & $\frac{ \partial \vbf_{ 0 } }{ \xbf }$
+           & $\pd{}{ \vbf_{ 0 } }{ \xbf }$ \\
+    72  &  4 & & ,,niezaburzonego'' & ,,zaburzonego'' \\
+    73  &  5 & & $\xbf( 0$ & $\xbf( 0 )$ \\
+    90  & &  3 & \emph{wraz z pochodną dla} $x = 0$ & \emph{dla} $x = 0$ \\
+    92  &  3 & & $U( x( O ) )$ & $U( x( 0 ) )$ \\
+    123 &  6 & & $^{ \R }A : \C^{ m } \to { }^{ \R }\C^{ n }$
+           & ${ }^{ \R }A : { }^{ \R }\C^{ m } \to { }^{ \R }\C^{ n }$ \\
+    125 &  5 & & $\mathbf{I}$ & $I$ \\
+    % & & & & \\
+    \hline
   \end{tabular}
 \end{center}
+\noi
+\StrWd{66}{7} \\
+\Jest \emph{tyłu do~brzegu} \\
+\Pow  \emph{tyłu nieograniczenie albo~do~brzegu} \\
+\StrWg{110}{9} \\
+\Jest sumą częściową szeregu --~iloczynu \\
+\Pow  jest sumą części wyrazów iloczynu \\
 
 
 
@@ -247,7 +261,7 @@ od~punktu $x = x_{ 0 }$. \\
 \Pow i~nie istnieje inne rozwiązanie określone w~przedziale
 $\abso{ x - x_{ 0 } } \leq h_{ 1 } \leq h$ które nie byłoby równe
 rozwiązaniu $y = y( x )$ w~każdym punkcie przedziału
-$\abso{ x - x_{ 0 } } \leq h_{ 1 }$.
+$\abso{ x - x_{ 0 } } \leq h_{ 1 }$. \\
 
 \vspace{\spaceTwo}
 
@@ -262,7 +276,7 @@ $\abso{ x - x_{ 0 } } \leq h_{ 1 }$.
 
 % ####################################################################
 % ####################################################################
-\bibliographystyle{alpha} \bibliography{Bibliography}{}
+\bibliographystyle{plalpha} \bibliography{LibMathInfo}{}
 
 
 % ############################

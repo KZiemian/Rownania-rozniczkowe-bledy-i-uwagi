@@ -20,10 +20,10 @@
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
 % ----------------------------
 \usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
-\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% \usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
 % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
@@ -198,8 +198,8 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 
 
 % ##################
-\Work{
-  L. H\"{o}rmander \\
+\Work{ % Autor i tytuł dzieła
+  Lars H\"{o}rmander \\
   ,,The Analysis of Linear Partial Differential Operators~I.
   Distributon Theory and~Fourier Analysis'', \cite{Hor83} }
 
@@ -304,10 +304,49 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
   \end{tabular}
 \end{center}
 
+\vspace{\spaceTwo}
 
 
 
 
+
+% ##################
+\Work{ % Autorka i tytuł dzieła
+  Zofia Szmydt \\
+  ,,Transformacja Fouriera i~równania różniczkowe liniowe'',
+  \cite{SzmydtTransformacjaFourieraIRownaniaRozniczkoweLiniowe1972} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    13  & 13 & & ta & \emph{ta} \\
+    % & & & & \\
+    % & & & & \\
+    32  & &  3 & $\boldsymbol{ \{ } q_{ k } \}$ & $\{ q_{ k } \}$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi
+\StrWg{308}{6} \\
+\Jest Arytmetyka teoretyczna \\
+\Pow  \emph{Arytmetyka teoretyczna} \\
+
+\vspace{\spaceTwo}
 
 
 
@@ -316,7 +355,7 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{alpha} \bibliography{Bibliography}{}
+\bibliographystyle{alpha} \bibliography{LibMathInfo}{}
 
 
 
