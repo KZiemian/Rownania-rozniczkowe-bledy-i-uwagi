@@ -54,7 +54,7 @@
 % ------------------------------
 % Pakiety do tekstów z nauk przyrodniczych
 % ------------------------------
-\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+\let\lll\undefined % Amsmath gryzie się z pakietami do języka
 % polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
 % oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
 \usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
@@ -84,7 +84,7 @@
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
 % ----------------------------
-% \usepackage{} % Pakiet napisany między innymi
+\usepackage{PDE} % Pakiet napisany między innymi
 % dla tego pliku.
 \usepackage{latexshortcuts}
 \usepackage{mathshortcuts}
@@ -144,86 +144,87 @@
 % ######################################
 
 
-% ##################
-\Work{ % Autor i tytuł dzieła
-  L.C. Evans \\
-  ,,Równania różniczkowe cząstkowe'',
-  \cite{EvansRowaniaRozniczoweCzastkowe08} }
+
+% % ##################
+% \Work{ % Autor i tytuł dzieła
+%   L.C. Evans \\
+%   ,,Równania różniczkowe cząstkowe'',
+%   \cite{EvansRowaniaRozniczoweCzastkowe08} }
 
 
-\CenterTB{Uwagi}
+% \CenterTB{Uwagi}
 
-\start \Str{594} 
+% \start \Str{594}
 
-\start \Str{597} Nie rozumiem, dlaczego trzeba zakładać we~wzorze
-całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
-że~całkowalność i~mierzalność wystarczają.
-
-
-\CenterTB{Błędy}
-\begin{center}
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    19  &  4 & & równań & tych równań \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    593 &  5 & & $a, b > 0$ & $a, b \in \mb{R}$ \\
-    597 &  1 & & \emph{współrzędnych) iloczyn} & \emph{współrzędnych)} \\
-    597 &  2 & & $x_{ n } >$ & $x_{ n } =$ \\
-    %% 600 & & 4 & $x + h_{ i } e_{ i } \in U_{ \epsilon }$ &
-    %% $x + h_{ i } e_{ i } \in U$ \\
-    %% & & & & \\
-    601 & & 10 & $W \: \subset \subset U$ & $W \subset \subset U$ \\
-    601 & &  5 & $W \: \subset \subset U$ & $W \subset \subset U$ \\
-    614 &  9 & & $u \: \in H$ & $u \in H$\\
-    615 & &  9 & miary & miary. \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-\end{center}
-
-\vspace{\spaceTwo}
+% \start \Str{597} Nie rozumiem, dlaczego trzeba zakładać we~wzorze
+% całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
+% że~całkowalność i~mierzalność wystarczają.
 
 
+% \CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     19  &  4 & & równań & tych równań \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     593 &  5 & & $a, b > 0$ & $a, b \in \mb{R}$ \\
+%     597 &  1 & & \emph{współrzędnych) iloczyn} & \emph{współrzędnych)} \\
+%     597 &  2 & & $x_{ n } >$ & $x_{ n } =$ \\
+%     %% 600 & & 4 & $x + h_{ i } e_{ i } \in U_{ \epsilon }$ &
+%     %% $x + h_{ i } e_{ i } \in U$ \\
+%     %% & & & & \\
+%     601 & & 10 & $W \: \subset \subset U$ & $W \subset \subset U$ \\
+%     601 & &  5 & $W \: \subset \subset U$ & $W \subset \subset U$ \\
+%     614 &  9 & & $u \: \in H$ & $u \in H$\\
+%     615 & &  9 & miary & miary. \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+
+% \vspace{\spaceTwo}
 
 
 
-% ##################
-\Work{ % Autor i tytuł dzieła
-  Lars H\"{o}rmander \\
-  ,,The Analysis of Linear Partial Differential Operators~I.
-  Distributon Theory and~Fourier Analysis'', \cite{Hor83} }
 
 
-\CenterTB{Błędy}
-\begin{center}
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    6   &  5 & & $M >$ & $M =$ \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-\end{center}
-\noi \\
-\StrWg{1}{3}
-\Jest every function is not differentiable. \\
-\Pow not every function is differentiable. \\
+% % ##################
+% \Work{ % Autor i tytuł dzieła
+%   Lars H\"{o}rmander \\
+%   ,,The Analysis of Linear Partial Differential Operators~I.
+%   Distributon Theory and~Fourier Analysis'', \cite{Hor83} }
 
-\vspace{\spaceTwo}
+
+% \CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     6   &  5 & & $M >$ & $M =$ \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+% \noi \\
+% \StrWg{1}{3}
+% \Jest every function is not differentiable. \\
+% \Powin not every function is differentiable. \\
+
+% \vspace{\spaceTwo}
 
 
 
@@ -233,7 +234,7 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 \Work{ % Autorka i tytuł dzieła
   Hanna Marcinkowska \\
   ,,Wstęp do~teorii równań różniczkowych cząstkowych'',
-  \cite{MarcinkowskaWstepRownanRozniczkowychCzastkowych86} }
+  \cite{MarcinkowskaWstepRownanRozniczkowychCzastkowych1986} }
 
 
 \CenterTB{Błędy}
@@ -245,7 +246,7 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    % & & & & \\
+    8   &  9 & & $| \ab | \;\; | \bb |$ & $| \ab | \, | \bb |$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -256,8 +257,8 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 \end{center}
 % \noi
 % \StrWg{}{}
-% \Jest 
-% \Pow 
+% \Jest
+% \Pow
 
 \vspace{\spaceTwo}
 
@@ -265,88 +266,88 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 
 
 
-% ####################
-\Work{
-  P. Strzelecki \\
-  ,,Krótkie wprowadzenie do równań różniczkowych cząstkowych'',
-  \cite{Str06} }
+% % ####################
+% \Work{
+%   P. Strzelecki \\
+%   ,,Krótkie wprowadzenie do równań różniczkowych cząstkowych'',
+%   \cite{Str06} }
 
 
-\CenterTB{Uwagi}
-\begin{itemize}
-\item Str. 117.???
-  % \item
-  % \item
-  % \item
-  % \item
-  % \item
-  % \item
-  % \item
-  % \item
-  % \item
-\end{itemize}
+% \CenterTB{Uwagi}
+% \begin{itemize}
+% \item Str. 117.???
+%   % \item
+%   % \item
+%   % \item
+%   % \item
+%   % \item
+%   % \item
+%   % \item
+%   % \item
+%   % \item
+% \end{itemize}
 
-\CenterTB{Błędy}
-\begin{center}
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    117 & & & $\exp\left( \fr{ 1 }{ 1 - | x |^{ 2 } } \right)$
-           & $\exp\left( -\fr{ 1 }{ 1 - | x |^{ 2 } } \right)$ \\
-           % & & & & \\
-           % & & & & \\
-           % & & & & \\
-    \hline
-  \end{tabular}
-\end{center}
+% \CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     117 & & & $\exp\left( \fr{ 1 }{ 1 - | x |^{ 2 } } \right)$
+%            & $\exp\left( -\fr{ 1 }{ 1 - | x |^{ 2 } } \right)$ \\
+%            % & & & & \\
+%            % & & & & \\
+%            % & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
 
-\vspace{\spaceTwo}
-
-
+% \vspace{\spaceTwo}
 
 
 
-% ##################
-\Work{ % Autorka i tytuł dzieła
-  Zofia Szmydt \\
-  ,,Transformacja Fouriera i~równania różniczkowe liniowe'',
-  \cite{SzmydtTransformacjaFourieraIRownaniaRozniczkoweLiniowe1972} }
 
 
-\CenterTB{Błędy}
-\begin{center}
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    13  & 13 & & ta & \emph{ta} \\
-    % & & & & \\
-    % & & & & \\
-    32  & &  3 & $\boldsymbol{ \{ } q_{ k } \}$ & $\{ q_{ k } \}$ \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-\end{center}
-\noi
-\StrWg{308}{6} \\
-\Jest Arytmetyka teoretyczna \\
-\Pow  \emph{Arytmetyka teoretyczna} \\
+% % ##################
+% \Work{ % Autorka i tytuł dzieła
+%   Zofia Szmydt \\
+%   ,,Transformacja Fouriera i~równania różniczkowe liniowe'',
+%   \cite{SzmydtTransformacjaFourieraIRownaniaRozniczkoweLiniowe1972} }
 
-\vspace{\spaceTwo}
+
+% \CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     13  & 13 & & ta & \emph{ta} \\
+%     % & & & & \\
+%     % & & & & \\
+%     32  & &  3 & $\boldsymbol{ \{ } q_{ k } \}$ & $\{ q_{ k } \}$ \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+% \noi
+% \StrWg{308}{6} \\
+% \Jest Arytmetyka teoretyczna \\
+% \Powin  \emph{Arytmetyka teoretyczna} \\
+
+% \vspace{\spaceTwo}
 
 
 
@@ -355,7 +356,7 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{alpha} \bibliography{LibMathInfo}{}
+\bibliographystyle{plalpha} \bibliography{LibMathInfo}{}
 
 
 

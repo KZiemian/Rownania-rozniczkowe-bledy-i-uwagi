@@ -54,7 +54,7 @@
 % ------------------------------
 % Pakiety do tekstów z nauk przyrodniczych
 % ------------------------------
-\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+\let\lll\undefined % Amsmath gryzie się z pakietami do języka
 % polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
 % oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
 \usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
@@ -84,8 +84,7 @@
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
 % ----------------------------
-\usepackage{rownaniarozniczkowe} % Pakiet napisany między innymi
-% dla tego pliku.
+\usepackage{ODE} % Pakiet napisany między innymi dla tego pliku.
 \usepackage{latexshortcuts}
 \usepackage{mathshortcuts}
 
@@ -148,7 +147,8 @@
 % ####################
 \Work{ % Autor i tytuł dzieła
   Władimir Igoriewicz Arnold \\
-  ,,Równania różniczkowe zwyczajne'', \cite{} }
+  ,,Równania różniczkowe zwyczajne'',
+  \cite{ArnoldRownaniaRozniczkoweZwyczajne1975} }
 
 
 \CenterTB{Błędy}
@@ -160,6 +160,7 @@
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
+    5   & &  7 & 1968 - 196 & 1968 - 1969 \\
     11  & 17 & & mechanice klasycznej & mechanice kwantowej \\
     15  & & 16 & rozdziale 6 & rozdziale 5 \\
     28  & 15 & & wzór (8) & wzór \\
@@ -185,9 +186,12 @@
     73  &  5 & & $\xbf( 0$ & $\xbf( 0 )$ \\
     90  & &  3 & \emph{wraz z pochodną dla} $x = 0$ & \emph{dla} $x = 0$ \\
     92  &  3 & & $U( x( O ) )$ & $U( x( 0 ) )$ \\
-    123 &  6 & & $^{ \R }A : \C^{ m } \to { }^{ \R }\C^{ n }$
-           & ${ }^{ \R }A : { }^{ \R }\C^{ m } \to { }^{ \R }\C^{ n }$ \\
+    123 &  6 & & $^{ \Rb }A : \Cb^{ m } \to { }^{ \Rb }\Cb^{ n }$
+           & ${ }^{ \Rb }A : { }^{ \Rb }\Cb^{ m } \to { }^{ \Rb }\Cb^{ n }$ \\
     125 &  5 & & $\mathbf{I}$ & $I$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
     % & & & & \\
     \hline
   \end{tabular}
@@ -195,10 +199,10 @@
 \noi
 \StrWd{66}{7} \\
 \Jest \emph{tyłu do~brzegu} \\
-\Pow  \emph{tyłu nieograniczenie albo~do~brzegu} \\
+\Powin  \emph{tyłu nieograniczenie albo~do~brzegu} \\
 \StrWg{110}{9} \\
 \Jest sumą częściową szeregu --~iloczynu \\
-\Pow  jest sumą części wyrazów iloczynu \\
+\Powin  jest sumą części wyrazów iloczynu \\
 
 
 
@@ -222,6 +226,7 @@ Załóżmy, że $\Phi_{ y }' \neq 0$, tak by było zapewnione istnienie
 funkcji uwikłanej. Jeżeli teraz spełnione jest równanie (10), to można
 je przekształcić do postaci:
 \begin{equation}
+  \lable{Matwiejew-01}
   -\fr{ \Phi_{ x }' }{ \Phi_{ y }' } = f( x, y ).
 \end{equation}
 Lewa strona tej równości jest równa pochodnej funkcji uwikłanej
@@ -252,13 +257,13 @@ $y( x )$, określonej wzorem (9). \\
 \noi \\
 \StrWg{15}{13}
 \Jest w~sensie ustępu \\
-\Pow w~sensie zdefiniowanym w~ustępie \\
+\Powin w~sensie zdefiniowanym w~ustępie \\
 \StrWd{20}{2} \\
 \Jest i~nie ma rozwiązania określonego w~tym samym przedziale
 nie~identycznego z~rozwiązaniem $y = y( x )$ chociażby w~jednym
 punkcie przedziału $\abso{ x - x_{ 0 } } \leq h$ różnym
 od~punktu $x = x_{ 0 }$. \\
-\Pow i~nie istnieje inne rozwiązanie określone w~przedziale
+\Powin i~nie istnieje inne rozwiązanie określone w~przedziale
 $\abso{ x - x_{ 0 } } \leq h_{ 1 } \leq h$ które nie byłoby równe
 rozwiązaniu $y = y( x )$ w~każdym punkcie przedziału
 $\abso{ x - x_{ 0 } } \leq h_{ 1 }$. \\
