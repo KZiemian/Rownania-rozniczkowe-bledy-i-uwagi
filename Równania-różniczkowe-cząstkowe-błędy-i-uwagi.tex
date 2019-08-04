@@ -5,14 +5,16 @@
 % --------------------------------------------------------------------
 \RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+
+
 \documentclass[a4paper,11pt]{article}
 % {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
 \usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
 % w języku angielskim.
 \usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
 % do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
 \usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
 
 
 
@@ -237,6 +239,27 @@
   \cite{MarcinkowskaWstepRownanRozniczkowychCzastkowych1986} }
 
 
+\CenterTB{Uwagi}
+
+\start \Str{15} Założenie, że~$\vectb$ jest wektorem jednostkowym, nie jest w~ogóle wykorzystane w~dowodzie i~jako takie należy je odrzucić. Wzór
+\begin{equation}
+  \label{eq:Marcinkowska-01}
+  t_{ n }
+  = \sum_{ j = 1 }^{ n - 1 } ( D_{ j } f\left( g_{ 1 }( s_{ 0 } ), \ldots,
+  g_{ n - 1 }( s_{ 0 } ) \right) g_{ j }'( s_{ 0 } ),
+\end{equation}
+wynika nie z~warunku $\abso{ \vectb }$, lecz z~tego, iż $g_{ j }'( s_{ 0 } ) = t_{ j }$, $j = 1, \ldots, n - 1$ i~z~tego, że krzywa
+\begin{equation}
+  \label{eq:Marcinkowska-02}
+  I \ni s \mapsto [ g_{ 1 }( s ), \ldots, g_{ n - 1 }( s ),
+  f( g_{ 1 }( s ), \ldots, g_{ n - 1 }( s ) ) ] \in \Rn
+\end{equation}
+leży na~powierzchni $\Sigma$.
+
+% \start \Str{597} Nie rozumiem, dlaczego trzeba zakładać we~wzorze
+% całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
+% że~całkowalność i~mierzalność wystarczają.
+
 \CenterTB{Błędy}
 \begin{center}
   \begin{tabular}{|c|c|c|c|c|}
@@ -246,7 +269,7 @@
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    8   &  9 & & $| \ab | \;\; | \bb |$ & $| \ab | \, | \bb |$ \\
+    8   &  9 & & $| \vecab | \;\; | \vecbb |$ & $| \vecab | \, | \vecbb |$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -258,9 +281,11 @@
 % \noi
 % \StrWg{}{}
 % \Jest
-% \Pow
+% \Powin
 
 \vspace{\spaceTwo}
+
+
 
 
 
